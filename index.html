@@ -1,207 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atlas Glow — Skincare from Marrakech</title>
-<meta name="description" content="Natural skincare & beauty essentials, delivered from the heart of Marrakech. Order easily on WhatsApp.">
+<title>Atlas Glow — Soins de la peau, Marrakech</title>
+<meta name="description" content="Produits de soins authentiques livrés partout au Maroc. Commande facile sur WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sand:#f6f1e9;
-  --cream:#fdfbf7;
-  --sage:#8a9b7c;
-  --sage-dark:#6b7d5e;
-  --blush:#e8c8bc;
-  --ink:#3b3a35;
-  --ink-soft:#77746a;
-  --line:#e7dfd2;
-  --radius:18px;
-  --arch:160px 160px 18px 18px;
+  --sand:#f6f1e9; --cream:#fdfbf7; --sage:#8a9b7c; --sage-dark:#6b7d5e;
+  --blush:#e8c8bc; --ink:#3b3a35; --ink-soft:#77746a; --line:#e7dfd2;
+  --radius:18px; --arch:160px 160px 18px 18px;
   --shadow:0 10px 30px rgba(59,58,53,.08);
   --trans:.35s cubic-bezier(.25,.6,.3,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  font-family:'Jost',sans-serif;
-  background:var(--cream);
-  color:var(--ink);
-  line-height:1.65;
-  font-weight:400;
-  -webkit-font-smoothing:antialiased;
-}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.15}
 .container{width:min(1120px,92%);margin-inline:auto}
 
-/* ---------- Navbar ---------- */
-.nav{
-  position:sticky;top:0;z-index:50;
-  background:rgba(253,251,247,.9);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-}
-.nav-inner{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:.9rem 0;
-}
-.logo{font-family:'Playfair Display',serif;font-size:1.35rem;letter-spacing:.02em}
+/* Navbar */
+.nav{position:sticky;top:0;z-index:50;background:rgba(253,251,247,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+.logo{font-family:'Playfair Display',serif;font-size:1.35rem}
 .logo span{color:var(--sage-dark);font-style:italic}
 .nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{
-  font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--ink-soft);position:relative;padding:.25rem 0;
-  transition:color var(--trans);
-}
-.nav-links a::after{
-  content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;
-  background:var(--sage-dark);transition:width var(--trans);
-}
+.nav-links a{font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);position:relative;padding:.25rem 0;transition:color var(--trans)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--sage-dark);transition:width var(--trans)}
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after{width:100%}
-.nav-cta{
-  background:var(--sage);color:#fff;padding:.55rem 1.2rem;border-radius:999px;
-  font-size:.9rem;letter-spacing:.04em;transition:background var(--trans),transform var(--trans);
-}
+.nav-cta{background:var(--sage);color:#fff;padding:.55rem 1.2rem;border-radius:999px;font-size:.9rem;transition:background var(--trans),transform var(--trans)}
 .nav-cta:hover{background:var(--sage-dark);transform:translateY(-1px)}
 .menu-toggle{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--ink)}
 
-/* ---------- Hero ---------- */
-.hero{
-  background:linear-gradient(180deg,var(--sand) 0%,var(--cream) 100%);
-  overflow:hidden;
-}
-.hero-inner{
-  display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;
-  padding:5.5rem 0 5rem;
-}
-.eyebrow{
-  display:inline-block;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--sage-dark);margin-bottom:1.2rem;
-}
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--sand) 0%,var(--cream) 100%);overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding:5.5rem 0 5rem}
+.eyebrow{display:inline-block;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:1.2rem}
 .hero h1{font-size:clamp(2.4rem,5.5vw,4rem);margin-bottom:1.2rem}
 .hero h1 em{font-style:italic;color:var(--sage-dark)}
 .hero p{color:var(--ink-soft);max-width:34rem;font-size:1.08rem;margin-bottom:2rem}
-.btn{
-  display:inline-flex;align-items:center;gap:.6rem;
-  background:var(--sage);color:#fff;padding:.9rem 1.9rem;border-radius:999px;
-  font-weight:500;letter-spacing:.03em;
-  transition:background var(--trans),transform var(--trans),box-shadow var(--trans);
-}
+.btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--sage);color:#fff;padding:.9rem 1.9rem;border-radius:999px;font-weight:500;transition:background var(--trans),transform var(--trans),box-shadow var(--trans)}
 .btn:hover{background:var(--sage-dark);transform:translateY(-2px);box-shadow:var(--shadow)}
 .btn svg{width:19px;height:19px;fill:currentColor}
-.hero-visual{
-  aspect-ratio:3/3.6;
-  border-radius:var(--arch);
-  background:
-    radial-gradient(120% 90% at 70% 20%, var(--blush) 0%, transparent 55%),
-    linear-gradient(160deg,#e6ddcb 0%,var(--sage) 130%);
-  border:1px solid var(--line);
-  position:relative;overflow:hidden;
-}
-.hero-visual::after{
-  content:"عناية طبيعية";
-  position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;
-  font-family:'Playfair Display',serif;color:rgba(255,255,255,.85);
-  font-size:1.4rem;letter-spacing:.1em;
-}
+.hero-visual{aspect-ratio:3/3.6;border-radius:var(--arch);background:radial-gradient(120% 90% at 70% 20%,var(--blush) 0%,transparent 55%),linear-gradient(160deg,#e6ddcb 0%,var(--sage) 130%);border:1px solid var(--line);position:relative;overflow:hidden}
+.hero-visual::after{content:"عناية طبيعية";position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;font-family:'Playfair Display',serif;color:rgba(255,255,255,.85);font-size:1.4rem;letter-spacing:.1em}
 
-/* ---------- Sections ---------- */
+/* Sections */
 section{padding:5rem 0}
 .section-head{text-align:center;margin-bottom:3rem}
 .section-head h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:.7rem}
 .section-head p{color:var(--ink-soft);max-width:36rem;margin-inline:auto}
 
-/* ---------- Products ---------- */
-.grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-  gap:1.8rem;
-}
-.card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  overflow:hidden;display:flex;flex-direction:column;
-  transition:transform var(--trans),box-shadow var(--trans);
-  opacity:0;transform:translateY(24px);
-}
+/* Products */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.8rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--trans),box-shadow var(--trans);opacity:0;transform:translateY(24px)}
 .card.visible{opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease,box-shadow var(--trans)}
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.card-img{
-  aspect-ratio:1/1;overflow:hidden;cursor:zoom-in;background:var(--sand);
-}
+.card-img{aspect-ratio:1/1;overflow:hidden;cursor:zoom-in;background:var(--sand)}
 .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .card:hover .card-img img{transform:scale(1.05)}
 .card-body{padding:1.3rem 1.3rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
-.card-body h3{font-size:1.15rem}
-.price{color:var(--sage-dark);font-weight:600;letter-spacing:.02em}
-.card-body p{font-size:.92rem;color:var(--ink-soft);flex:1}
-.card-btn{
-  margin-top:.8rem;display:inline-flex;justify-content:center;align-items:center;gap:.5rem;
-  border:1.5px solid var(--sage);color:var(--sage-dark);border-radius:999px;
-  padding:.6rem 1rem;font-size:.92rem;font-weight:500;
-  transition:background var(--trans),color var(--trans);
-}
+.card-body h3{font-size:1.12rem}
+.price{color:var(--sage-dark);font-weight:600}
+.desc-fr{font-size:.92rem;color:var(--ink-soft)}
+.desc-ar{font-size:.95rem;color:var(--ink-soft);direction:rtl;text-align:right;flex:1}
+.card-btn{margin-top:.8rem;display:inline-flex;justify-content:center;align-items:center;gap:.5rem;border:1.5px solid var(--sage);color:var(--sage-dark);border-radius:999px;padding:.6rem 1rem;font-size:.92rem;font-weight:500;transition:background var(--trans),color var(--trans)}
 .card-btn:hover{background:var(--sage);color:#fff}
 .card-btn svg{width:17px;height:17px;fill:currentColor}
 
-/* ---------- About ---------- */
+/* About */
 .about{background:var(--sand)}
-.about-inner{
-  display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center;
-}
-.about-visual{
-  aspect-ratio:1/1.15;border-radius:var(--arch);
-  background:
-    radial-gradient(100% 80% at 30% 25%, rgba(255,255,255,.5) 0%, transparent 55%),
-    linear-gradient(200deg,var(--blush) 0%,#c9a68f 130%);
-  border:1px solid var(--line);
-}
+.about-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center}
+.about-visual{aspect-ratio:1/1.15;border-radius:var(--arch);background:radial-gradient(100% 80% at 30% 25%,rgba(255,255,255,.5) 0%,transparent 55%),linear-gradient(200deg,var(--blush) 0%,#c9a68f 130%);border:1px solid var(--line)}
 .about h2{font-size:clamp(1.8rem,3.5vw,2.4rem);margin-bottom:1rem}
 .about p{color:var(--ink-soft);margin-bottom:1rem}
+.about p[dir=rtl]{text-align:right}
 
-/* ---------- Contact ---------- */
+/* Contact */
 .socials{display:flex;justify-content:center;gap:1.3rem;margin-top:2.2rem;flex-wrap:wrap}
-.social{
-  display:flex;flex-direction:column;align-items:center;gap:.6rem;
-  width:120px;padding:1.4rem 0;background:#fff;border:1px solid var(--line);
-  border-radius:var(--radius);
-  transition:transform var(--trans),box-shadow var(--trans);
-}
+.social{display:flex;flex-direction:column;align-items:center;gap:.6rem;width:120px;padding:1.4rem 0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);transition:transform var(--trans),box-shadow var(--trans)}
 .social:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .social svg{width:30px;height:30px;fill:var(--sage-dark)}
-.social span{font-size:.85rem;letter-spacing:.05em;color:var(--ink-soft)}
+.social span{font-size:.85rem;color:var(--ink-soft)}
 
-/* ---------- Footer ---------- */
-footer{
-  border-top:1px solid var(--line);padding:2rem 0;text-align:center;
-  color:var(--ink-soft);font-size:.9rem;
-}
+/* Footer */
+footer{border-top:1px solid var(--line);padding:2rem 0;text-align:center;color:var(--ink-soft);font-size:.9rem}
 footer strong{font-family:'Playfair Display',serif;color:var(--ink)}
 
-/* ---------- Lightbox ---------- */
-.lightbox{
-  position:fixed;inset:0;background:rgba(30,29,26,.85);
-  display:none;align-items:center;justify-content:center;z-index:100;
-  padding:2rem;cursor:zoom-out;
-}
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(30,29,26,.85);display:none;align-items:center;justify-content:center;z-index:100;padding:2rem;cursor:zoom-out}
 .lightbox.open{display:flex}
 .lightbox img{max-width:90vw;max-height:85vh;border-radius:var(--radius);box-shadow:0 20px 60px rgba(0,0,0,.4)}
 
-/* ---------- Responsive ---------- */
+/* Responsive */
 @media (max-width:820px){
   .hero-inner,.about-inner{grid-template-columns:1fr}
   .hero-visual{max-width:420px;margin-inline:auto;order:-1}
   .about-visual{max-width:380px;margin-inline:auto}
   .menu-toggle{display:block}
-  .nav-links{
-    position:absolute;top:100%;left:0;right:0;
-    flex-direction:column;gap:0;background:var(--cream);
-    border-bottom:1px solid var(--line);
-    max-height:0;overflow:hidden;transition:max-height .35s ease;
-  }
+  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--cream);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .35s ease}
   .nav-links.open{max-height:320px}
   .nav-links li{border-top:1px solid var(--line)}
   .nav-links a{display:block;padding:1rem 5%}
@@ -211,130 +114,286 @@ footer strong{font-family:'Playfair Display',serif;color:var(--ink)}
   *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
   .card{opacity:1;transform:none}
 }
-/* If JS never runs, cards must still be visible */
 .no-js .card{opacity:1;transform:none}
 </style>
 </head>
 <body class="no-js">
 <script>document.body.classList.remove('no-js')</script>
 
-<!-- ===== Navbar ===== -->
 <nav class="nav">
   <div class="container nav-inner">
     <a href="#home" class="logo">Atlas <span>Glow</span></a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#products">Produits</a></li>
+      <li><a href="#about">À propos</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a class="nav-cta" href="https://wa.me/212621155200" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a class="nav-cta" href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- ===== Hero ===== -->
 <header class="hero" id="home">
   <div class="container hero-inner">
     <div>
-      <span class="eyebrow">Marrakech · Natural Skincare</span>
-      <h1>Glow, the <em>Marrakech</em> way.</h1>
-      <p>Authentic skincare and beauty essentials, hand-picked and delivered across Morocco. Simple ordering — one message on WhatsApp and it's on its way.</p>
-      <a class="btn" href="https://wa.me/212621155200?text=Hello%20Atlas%20Glow!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+      <span class="eyebrow">Marrakech · Soins Authentiques</span>
+      <h1>L'éclat, à la <em>marocaine</em>.</h1>
+      <p>Produits de soins authentiques, sélectionnés avec soin et livrés partout au Maroc. Un simple message WhatsApp et votre commande est en route. — منتجات أصلية، توصيل سريع في جميع أنحاء المغرب.</p>
+      <a class="btn" href="https://wa.me/212600000000?text=Bonjour%20Atlas%20Glow%20!%20Je%20souhaite%20passer%20une%20commande." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 2a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4m-3 3.8c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.2.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3l-2-1c-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1a6.5 6.5 0 0 1-3.3-2.9c-.2-.4 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L10 8.2c-.2-.4-.4-.4-.6-.4h-.4Z"/></svg>
-        Order on WhatsApp
+        Commander sur WhatsApp
       </a>
     </div>
     <div class="hero-visual" aria-hidden="true"></div>
   </div>
 </header>
 
-<!-- ===== Products ===== -->
 <section id="products">
   <div class="container">
     <div class="section-head">
-      <h2>Our Selection</h2>
-      <p>A curated edit of trusted skincare, suncare and body care — tap any product to order it instantly on WhatsApp.</p>
+      <h2>Nos Produits</h2>
+      <p>Une sélection soignée de soins visage, solaires et corps. Cliquez sur une image pour l'agrandir, ou commandez directement sur WhatsApp.</p>
     </div>
     <div class="grid" id="productGrid">
 
+      <!-- Product 2 -->
       <article class="card">
-        <div class="card-img"><img src="images\product1.jpeg" alt="Sunscreen SPF 50+" loading="lazy"></div>
+        <div class="card-img"><img src="images/product2.jpeg" alt="SKIN1004 Hyalu-Cica Water-Fit Sun Serum SPF50+" loading="lazy"></div>
         <div class="card-body">
-          <h3>Sun Cream SPF 50+</h3>
-          <span class="price">180 MAD</span>
-          <p>Very high protection, brightening and anti-dark-spot formula for daily use.</p>
-          <a class="card-btn" href="https://wa.me/212621155200?text=Hello!%20I%27d%20like%20to%20order%3A%20Sun%20Cream%20SPF%2050%2B" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Order via WhatsApp</a>
+          <h3>SKIN1004 Hyalu-Cica Sun Serum SPF50+</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Sérum solaire léger SPF50+ PA++++ à la centella de Madagascar. Hydrate, apaise et protège sans laisser de traces blanches.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">سيروم واقٍ من الشمس خفيف SPF50+ بخلاصة السنتيلا من مدغشقر. يرطّب البشرة ويهدّئها ويحميها دون أثر أبيض.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20SKIN1004%20Hyalu-Cica%20Sun%20Serum" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
         </div>
       </article>
 
+      <!-- Product 3 -->
       <article class="card">
-        <div class="card-img"><img src="images\product2.jpeg" alt="Double cleansing duo set" loading="lazy"></div>
+        <div class="card-img"><img src="images/product3.jpeg" alt="Eucerin Pigment Control Sun Fluid SPF50+" loading="lazy"></div>
         <div class="card-body">
-          <h3>Centella Cleansing Duo</h3>
-          <span class="price">320 MAD</span>
-          <p>Gentle cleansing oil + ampoule foam set for a soft, thorough double cleanse.</p>
-          <a class="card-btn" href="https://wa.me/212600000000?text=Hello!%20I%27d%20like%20to%20order%3A%20Centella%20Cleansing%20Duo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Order via WhatsApp</a>
+          <h3>Eucerin Pigment Control Sun Fluid SPF50+</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Fluide solaire très haute protection contre l'hyperpigmentation. Prévient et réduit visiblement les taches brunes.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">سائل واقٍ من الشمس بحماية عالية جداً ضد التصبغات. يقي من البقع الداكنة ويقلّل ظهورها بشكل ملحوظ.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Eucerin%20Pigment%20Control%20Sun%20Fluid" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
         </div>
       </article>
 
+      <!-- Product 4 -->
       <article class="card">
-        <div class="card-img"><img src="images\product3.jpeg" alt="Pigment control sun fluid" loading="lazy"></div>
+        <div class="card-img"><img src="images/product4.jpeg" alt="Avène Eau Thermale 50 ml" loading="lazy"></div>
         <div class="card-body">
-          <h3>Pigment Control Sun Fluid</h3>
-          <span class="price">240 MAD</span>
-          <p>SPF 50+ fluid that helps prevent and reduce sun-induced dark spots.</p>
-          <a class="card-btn" href="https://wa.me/212600000000?text=Hello!%20I%27d%20like%20to%20order%3A%20Pigment%20Control%20Sun%20Fluid" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Order via WhatsApp</a>
+          <h3>Avène Eau Thermale 50 ml</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Brume d'eau thermale apaisante et anti-irritante pour peaux sensibles. Format voyage pratique de 50 ml.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">بخاخ ماء حراري مهدّئ ومضاد للتهيّج للبشرة الحساسة. حجم عملي 50 مل مناسب للسفر.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Av%C3%A8ne%20Eau%20Thermale%2050ml" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
         </div>
       </article>
 
+      <!-- Product 5 -->
       <article class="card">
-        <div class="card-img"><img src="images\product4.jpeg" alt="Thermal spring water spray" loading="lazy"></div>
+        <div class="card-img"><img src="images/product5.jpeg" alt="Victoria's Secret Sizzling Vanilla lotion parfumée" loading="lazy"></div>
         <div class="card-body">
-          <h3>Thermal Spring Water</h3>
-          <span class="price">60 MAD</span>
-          <p>Soothing facial mist for sensitive skin — calms and refreshes instantly.</p>
-          <a class="card-btn" href="https://wa.me/212600000000?text=Hello!%20I%27d%20like%20to%20order%3A%20Thermal%20Spring%20Water" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Order via WhatsApp</a>
+          <h3>Victoria's Secret Sizzling Vanilla — Lotion</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Lotion parfumée 236 ml aux notes de lait de coco, vanille et canne à sucre. Peau douce et délicieusement parfumée.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">لوشن معطّر 236 مل برائحة حليب جوز الهند والفانيليا وقصب السكر. بشرة ناعمة وعطر يدوم طويلاً.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20VS%20Sizzling%20Vanilla%20Lotion" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
         </div>
       </article>
 
+      <!-- Product 6 -->
       <article class="card">
-        <div class="card-img"><img src="images\product5.jpeg" alt="Fragrance body lotion" loading="lazy"></div>
+        <div class="card-img"><img src="images/product6.jpeg" alt="Kaline K-Sun SPF50+ avec Cold Cream offerte" loading="lazy"></div>
         <div class="card-body">
-          <h3>Sizzling Vanilla Lotion</h3>
-          <span class="price">150 MAD</span>
-          <p>Fragrance body lotion with coconut milk & sugar cane — warm, sweet, addictive.</p>
-          <a class="card-btn" href="https://wa.me/212600000000?text=Hello!%20I%27d%20like%20to%20order%3A%20Sizzling%20Vanilla%20Lotion" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Order via WhatsApp</a>
+          <h3>Kaline K-Sun SPF50+ + Cold Cream Offerte</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Pack écran solaire invisible SPF50+ matifiant anti-âge pour peaux mixtes à grasses, avec Cold Cream 50 ml offerte.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">باقة واقي شمس شفاف SPF50+ مضاد للمعان والشيخوخة للبشرة المختلطة والدهنية، مع كريم بارد 50 مل هدية.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Kaline%20K-Sun%20Pack" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
         </div>
       </article>
 
+      <!-- Product 7 -->
       <article class="card">
-        <div class="card-img"><img src="images\product6.jpeg" alt="Hyalu-cica sun serum" loading="lazy"></div>
+        <div class="card-img"><img src="images/product7.jpeg" alt="La Roche-Posay Eau Thermale" loading="lazy"></div>
         <div class="card-body">
-          <h3>Hyalu-Cica Sun Serum</h3>
-          <span class="price">200 MAD</span>
-          <p>Lightweight SPF 50+ water-fit sun serum with hydrating hyaluronic acid.</p>
-          <a class="card-btn" href="https://wa.me/212600000000?text=Hello!%20I%27d%20like%20to%20order%3A%20Hyalu-Cica%20Sun%20Serum" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Order via WhatsApp</a>
+          <h3>La Roche-Posay Eau Thermale 50 ml</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Eau thermale apaisante pour peaux sensibles. Calme les irritations et rafraîchit la peau au quotidien.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">ماء حراري مهدّئ للبشرة الحساسة. يخفف التهيّج وينعش البشرة في الاستعمال اليومي.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20La%20Roche-Posay%20Eau%20Thermale" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
         </div>
       </article>
 
+      <!-- Product 8 -->
       <article class="card">
-        <div class="card-img"><img src="images\product7.jpeg" alt="Relief cream" loading="lazy"></div>
+        <div class="card-img"><img src="images/product8.jpeg" alt="Marvis Classic Strong Mint dentifrice" loading="lazy"></div>
         <div class="card-body">
-          <h3>345 Relief Cream</h3>
-          <span class="price">260 MAD</span>
-          <p>Calming barrier cream for sensitive, irritated skin — a K-beauty favorite.</p>
-          <a class="card-btn" href="https://wa.me/212600000000?text=Hello!%20I%27d%20like%20to%20order%3A%20345%20Relief%20Cream" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Order via WhatsApp</a>
+          <h3>Marvis Classic Strong Mint 85 ml</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Le dentifrice italien iconique à la menthe forte. Fraîcheur intense et haleine impeccable, dans un tube élégant.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">معجون الأسنان الإيطالي الشهير بالنعناع القوي. انتعاش قوي ونفَس منعش، في عبوة أنيقة.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Marvis%20Classic%20Strong%20Mint" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
         </div>
       </article>
 
+      <!-- Product 9 -->
       <article class="card">
-        <div class="card-img"><img src="images\product8.jpeg" alt="Classic mint toothpaste" loading="lazy"></div>
+        <div class="card-img"><img src="images/product9.jpeg" alt="D-White Crème Solaire SPF50+" loading="lazy"></div>
         <div class="card-body">
-          <h3>Marvis Classic Mint</h3>
-          <span class="price">120 MAD</span>
-          <p>The iconic Italian toothpaste — strong mint freshness in a stylish tube.</p>
-          <a class="card-btn" href="https://wa.me/212600000000?text=Hello!%20I%27d%20like%20to%20order%3A%20Marvis%20Classic%20Mint" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Order via WhatsApp</a>
+          <h3>D-White Crème Solaire SPF50+</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Crème solaire très haute protection, illuminante, anti-taches, éclaircissante et anti-oxydante. Prévient tous types de taches brunes.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">كريم واقٍ من الشمس بحماية عالية جداً، مفتّح وموحّد للون البشرة ومضاد للبقع والأكسدة. يقي من جميع أنواع البقع الداكنة.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20D-White%20Cr%C3%A8me%20Solaire%20SPF50%2B" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 10 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product10.jpeg" alt="SKIN1004 Madagascar Centella Double Cleansing Duo" loading="lazy"></div>
+        <div class="card-body">
+          <h3>SKIN1004 Double Cleansing Duo</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Coffret double nettoyage à la centella de Madagascar : huile nettoyante légère + mousse ampoule pour une peau propre et apaisée.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">طقم تنظيف مزدوج بخلاصة السنتيلا: زيت منظّف خفيف + رغوة منظّفة، لبشرة نظيفة وهادئة.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20SKIN1004%20Double%20Cleansing%20Duo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 11 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product11.jpeg" alt="Vitamines effervescentes Mivolis assorties" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Mivolis — Vitamines Effervescentes</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Comprimés effervescents allemands : Magnésium, Vitamine C, B12, Calcium, Multivitamines et plus. 20 comprimés par tube.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">أقراص فوّارة ألمانية: مغنيسيوم، فيتامين C، B12، كالسيوم، فيتامينات متعددة وغيرها. 20 قرصاً في كل أنبوب.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Mivolis%20Vitamines" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 12 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product12.jpeg" alt="Victoria's Secret Sizzling Vanilla brume parfumée" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Victoria's Secret Sizzling Vanilla — Brume</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Brume parfumée 250 ml aux notes gourmandes de coco, vanille et canne à sucre. Le parfum tendance du moment.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">معطّر جسم 250 مل برائحة جوز الهند والفانيليا وقصب السكر. العطر الأكثر رواجاً حالياً.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20VS%20Sizzling%20Vanilla%20Brume" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 13 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product13.jpeg" alt="Tubes Mivolis Magnesium, Vitamin C, Multimineral, Multivitamin" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Mivolis — Pack 4 Tubes</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Pack de 4 tubes : Magnésium (citron), Vitamine C (orange sanguine), Multiminéral et Multivitamines (tropical). Sans sucre ajouté.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">باقة من 4 أنابيب: مغنيسيوم بالليمون، فيتامين C بالبرتقال، معادن متعددة وفيتامينات متعددة بنكهة استوائية. بدون سكر مضاف.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Mivolis%20Pack%204%20Tubes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 14 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product14.jpeg" alt="Arencia Vitamin C Booster Shot" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Arencia Vitamin C Booster Shot 30 ml</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Soin coréen visage et yeux à la vitamine C. Booste l'éclat, unifie le teint et illumine les zones ternes.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">مستحضر كوري للوجه ومحيط العينين بفيتامين C. يعزّز الإشراق ويوحّد لون البشرة وينير المناطق الباهتة.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Arencia%20Vitamin%20C%20Booster" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 15 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product15.jpeg" alt="Shampoings et déodorants Malizia" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Malizia — Shampoings Nourrissants</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Shampoings italiens nourrissants : olive, camélia & argan, coco & macadamia, avocat & karité. Pour tous types de cheveux.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">شامبو إيطالي مغذٍّ: زيتون، كاميليا وأركان، جوز الهند وماكاداميا، أفوكادو وزبدة الشيا. لجميع أنواع الشعر.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Malizia%20Shampoing" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 16 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product16.jpeg" alt="Krème Crème Solaire Anti-Taches SPF50+" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Krème Crème Solaire Anti-Taches SPF50+</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Crème solaire haute protection anti-taches brunes, 50 ml. Convient à tous les types de peaux.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">كريم واقٍ من الشمس بحماية عالية ضد البقع الداكنة، 50 مل. مناسب لجميع أنواع البشرة.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Kr%C3%A8me%20Solaire%20Anti-Taches" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 17 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product17.jpeg" alt="Shalfoup Original Skin Cream" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Shalfoup Original — Skin Cream</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Crème pour la peau extra blanchissante, édition limitée, pour visage, mains et corps. Le classique doré incontournable.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">كريم للبشرة بتركيبة مفتّحة، إصدار محدود، للوجه واليدين والجسم. الكريم الذهبي الكلاسيكي المعروف.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Shalfoup%20Skin%20Cream" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 18 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product18.jpeg" alt="Yves Rocher Pure Menthe gel nettoyant purifiant" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Yves Rocher Pure Menthe — Gel Nettoyant</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Gel nettoyant purifiant 390 ml à la menthe poivrée bio. Nettoie, purifie et matifie les peaux mixtes à grasses.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">جيل منظّف منقٍّ 390 مل بالنعناع العضوي. ينظّف البشرة المختلطة والدهنية وينقّيها ويزيل اللمعان.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Yves%20Rocher%20Pure%20Menthe" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 19 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product19.jpeg" alt="Ecladerm Sun Derm SPF50+ écran solaire invisible" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Ecladerm Sun Derm SPF50+ Anti-Taches</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Écran solaire invisible haute protection UVB & UVA, 50 ml. Anti-taches, pour tous types de peaux.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">واقٍ شمسي شفاف بحماية عالية من أشعة UVB وUVA، 50 مل. مضاد للبقع ومناسب لجميع أنواع البشرة.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Ecladerm%20Sun%20Derm" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 20 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product20.jpeg" alt="SKIN1004 Double Cleansing Duo en carton" loading="lazy"></div>
+        <div class="card-body">
+          <h3>SKIN1004 Double Cleansing Duo — Arrivage</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Nouveau stock du coffret double nettoyage à la centella de Madagascar. Quantité limitée, commandez vite.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">وصلت كمية جديدة من طقم التنظيف المزدوج بخلاصة السنتيلا. الكمية محدودة، سارعوا بالطلب.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20SKIN1004%20Duo%20(nouvel%20arrivage)" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
+        </div>
+      </article>
+
+      <!-- Product 21 -->
+      <article class="card">
+        <div class="card-img"><img src="images/product21.jpeg" alt="Acure Brightening Facial Scrub" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Acure Brightening Facial Scrub 118 ml</h3>
+          <span class="price">— MAD</span>
+          <p class="desc-fr">Gommage éclaircissant pour le visage au varech marin et à l'argile verte française. Idéal pour les peaux ternes.</p>
+          <p class="desc-ar" dir="rtl" lang="ar">مقشّر منير للوجه بالطحالب البحرية والطين الأخضر الفرنسي. مثالي للبشرة الباهتة والمتعبة.</p>
+          <a class="card-btn" href="https://wa.me/212600000000?text=Bonjour%20!%20Je%20veux%20commander%20%3A%20Acure%20Brightening%20Scrub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Commander via WhatsApp</a>
         </div>
       </article>
 
@@ -342,28 +401,27 @@ footer strong{font-family:'Playfair Display',serif;color:var(--ink)}
   </div>
 </section>
 
-<!-- ===== About ===== -->
 <section class="about" id="about">
   <div class="container about-inner">
     <div class="about-visual" aria-hidden="true"></div>
     <div>
-      <span class="eyebrow">Our Story</span>
-      <h2>Born in the heart of Marrakech</h2>
-      <p>Atlas Glow started as a small passion project in the red city — bringing authentic, dermatologist-loved skincare to Moroccan homes without the hassle of travel or unreliable sellers.</p>
-      <p>Every product we offer is carefully sourced, stored with care, and delivered fast across Morocco. We believe good skin shouldn't be complicated: pick what you love, send a message, and it's at your door.</p>
+      <span class="eyebrow">Notre Histoire — قصتنا</span>
+      <h2>Née au cœur de Marrakech</h2>
+      <p>Atlas Glow est née dans la ville rouge avec une mission simple : rendre les soins authentiques et de qualité accessibles à toutes les Marocaines et tous les Marocains, sans intermédiaires douteux ni longs délais.</p>
+      <p>Chaque produit est soigneusement sélectionné, stocké avec soin et livré rapidement partout au Maroc. Choisissez, envoyez un message, et c'est chez vous.</p>
+      <p dir="rtl" lang="ar">وُلدت أطلس غلو في قلب مراكش بمهمة بسيطة: توفير منتجات عناية أصلية وذات جودة عالية للجميع في المغرب، مع توصيل سريع وخدمة موثوقة. اختاروا منتجكم، أرسلوا رسالة، ويصلكم حتى باب المنزل.</p>
     </div>
   </div>
 </section>
 
-<!-- ===== Contact ===== -->
 <section id="contact">
   <div class="container">
     <div class="section-head">
-      <h2>Let's talk</h2>
-      <p>Questions, orders or advice — we reply fast. Find us here:</p>
+      <h2>Contactez-nous</h2>
+      <p>Questions, commandes ou conseils — nous répondons rapidement. — تواصلوا معنا، نرد بسرعة.</p>
     </div>
     <div class="socials">
-      <a class="social" href="https://wa.me/21221155200" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <a class="social" href="https://wa.me/212600000000" target="_blank" rel="noopener" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 2a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4m-3 3.8c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.2.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3l-2-1c-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1a6.5 6.5 0 0 1-3.3-2.9c-.2-.4 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L10 8.2c-.2-.4-.4-.4-.6-.4h-.4Z"/></svg>
         <span>WhatsApp</span>
       </a>
@@ -379,24 +437,20 @@ footer strong{font-family:'Playfair Display',serif;color:var(--ink)}
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
 <footer>
   <div class="container">
-    <strong>Atlas Glow</strong> — Marrakech, Morocco · © <span id="year">2026</span> All rights reserved.
+    <strong>Atlas Glow</strong> — Marrakech, Maroc · © <span id="year">2026</span> Tous droits réservés.
   </div>
 </footer>
 
-<!-- ===== Lightbox ===== -->
-<div class="lightbox" id="lightbox" role="dialog" aria-label="Enlarged product image">
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Image agrandie">
   <img src="" alt="">
 </div>
 
 <script>
 (function(){
-  // Year
   var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
 
-  // Mobile menu
   var toggle=document.querySelector('.menu-toggle'), links=document.getElementById('navLinks');
   if(toggle&&links){
     toggle.addEventListener('click',function(){
@@ -408,19 +462,17 @@ footer strong{font-family:'Playfair Display',serif;color:var(--ink)}
     });
   }
 
-  // Scroll-in animation
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(en){
         if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}
       });
-    },{threshold:.12});
+    },{threshold:.1});
     document.querySelectorAll('.card').forEach(function(c){io.observe(c);});
   }else{
     document.querySelectorAll('.card').forEach(function(c){c.classList.add('visible');});
   }
 
-  // Lightbox
   var lb=document.getElementById('lightbox'), lbImg=lb?lb.querySelector('img'):null;
   document.querySelectorAll('.card-img img').forEach(function(img){
     img.parentElement.addEventListener('click',function(){
