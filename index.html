@@ -48,9 +48,31 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.15}
 .btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--sage);color:#fff;padding:.9rem 1.9rem;border-radius:999px;font-weight:500;transition:background var(--trans),transform var(--trans),box-shadow var(--trans)}
 .btn:hover{background:var(--sage-dark);transform:translateY(-2px);box-shadow:var(--shadow)}
 .btn svg{width:19px;height:19px;fill:currentColor}
-.hero-visual{aspect-ratio:3/3.6;border-radius:var(--arch);background:radial-gradient(120% 90% at 70% 20%,var(--blush) 0%,transparent 55%),linear-gradient(160deg,#e6ddcb 0%,var(--sage) 130%);border:1px solid var(--line);position:relative;overflow:hidden}
-.hero-visual::after{content:"عناية طبيعية";position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;font-family:'Playfair Display',serif;color:rgba(255,255,255,.85);font-size:1.4rem;letter-spacing:.1em}
+.hero-visual {
+  aspect-ratio: 3/3.6;
+  border-radius: var(--arch);
+  /* On remplace les dégradés par ton image */
+  background: url('images/b8396e2288644ee130284854.png') center/cover no-repeat;
+  background-color: var(--sand); /* Couleur de fond en attendant le chargement */
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
 
+.hero-visual::after {
+  content: "عناية طبيعية";
+  position: absolute;
+  bottom: 1.4rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: rgba(255,255,255,.85); /* Tu peux changer cette couleur si l'image est trop claire */
+  font-size: 1.4rem;
+  letter-spacing: .1em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Ajout d'une ombre pour que le texte reste lisible sur la photo */
+}
+  
 /* Sections */
 section{padding:5rem 0}
 .section-head{text-align:center;margin-bottom:3rem}
